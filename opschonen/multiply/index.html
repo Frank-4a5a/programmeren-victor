@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label>Number 1:</label>
+            <input type="number" name="firstNumber"/>
+        </div>
+        <div>
+            <label>Number 2:</label>
+            <input type="number" name="secondNumber"/>
+        </div>
+        <div>
+            <button type="button" id="multiply">Multiply</button>
+        </div>
+        <div id="result"></div>
+    </form>
+    <script>
+        function multiplyModule(){
+            getNumbers();
+            multiply();
+            function getNumbers(){
+                number1 = document.querySelector("input[name=firstNumber]").value;
+                number2 = document.querySelector("input[name=secondNumber]").value;
+            }
+            function multiply(){
+                result = number1 * number2;
+                document.querySelector("#result").innerHTML = result;
+            }
+            
+        }
+        document.querySelector("#multiply").addEventListener("click",multiplyModule);
+        multiplyModule();
+    </script>
+</body>
+</html>

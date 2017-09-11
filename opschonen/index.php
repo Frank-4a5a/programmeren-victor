@@ -1,10 +1,10 @@
 <?php
-function opschonen($a="   dEZe ZIN klOpt nIEt   ")
+function opschonen($x="   dEZe ZIN klOpt nIEt   ")
 {
-    $a = strtolower($a);
-    $a =  ucwords($a);
-    $a =  ltrim($a," ");
-    $a =  rtrim($a," ");
-    echo $a;
+    $x = strtolower($x);
+    $x =  ucwords($x);
+    $x =  ltrim($x," ");
+    $x =  rtrim($x," ");
+    echo $x;
 }
 opschonen();

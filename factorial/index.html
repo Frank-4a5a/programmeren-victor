@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    
+</body>
+<script>
+    var result1 = factorial(5);
+    console.log(result1);
+    
+    var result2 = factorial(8);
+    console.log(result2);
+    
+    var result3 = factorial(1);
+    console.log(result3);
+    
+    var result4 = factorial(0);
+    console.log(result4);
+    
+    var result5 = factorial(-1);
+    console.log(result5);
+    
+    function factorial(x){
+        var y = 1;
+        if (x < 0) {
+            alert(x + " is niet een acceptable cijfer");
+        }
+        else{
+            for (var i = x; i > 0; i--){
+                y *= i;
+        }
+        return y;
+    }
+        }
+        
+        
+</script>
+</html>

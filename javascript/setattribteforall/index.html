@@ -16,7 +16,7 @@
     setImgAttr('width', '200');
 
     function select(element) {
-      selectElement = document.querySelector(element);
+      var selectElement = document.querySelector(element);
 
       return function(attribute, value){
         return selectElement.setAttribute(attribute, value);

@@ -5,8 +5,9 @@
     <title></title>
   </head>
   <body>
-    <a href="http://www.google.nl">link</a>
-    <img src="https://d1u1mce87gyfbn.cloudfront.net/media/thumbnail/genji-concept.jpg" alt="">
+    <a href="https://overwatch.gamepedia.com/Genji"><img src="https://d1u1mce87gyfbn.cloudfront.net/media/thumbnail/genji-concept.jpg" alt=""></a>
+    <a href="https://overwatch.gamepedia.com/Genji"><img src="https://d1u1mce87gyfbn.cloudfront.net/media/thumbnail/genji-concept.jpg" alt=""></a>
+
   </body>
   <script>
     var setLinksAttr = select('a');
@@ -16,12 +17,14 @@
     setImgAttr('width', '200');
 
     function select(element) {
-      var selectElement = document.querySelector(element);
+      var selectElement = document.querySelectorAll(element);
 
       return function(attribute, value){
-        return selectElement.setAttribute(attribute, value);
-      }
-    }
+        selectElement.forEach(function(element){
+          return element.setAttribute(attribute, value);
+        });
+      };
+    };
 
   </script>
 </html>

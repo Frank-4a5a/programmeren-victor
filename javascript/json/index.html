@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+  var xhr = new XMLHttpRequest();
+
+  xhr.addEventListener("load", ajaxLoad);
+  xhr.addEventListener("error", ajaxError);
+
+  xhr.open("GET", "students.json");
+  xhr.send();
+
+  function ajaxLoad(event) {
+    if (this.status === 200) {
+        console.log(this.responseText);   // this === xhr
+    } else {
+        console.log("unsuccessful request");
+    }
+}
+
+function ajaxError(event) {
+    console.log('error');
+}
+
+// var person = JSON.parse(jsonString);
+// console.log(person.studenten[1]);
+  </script>
+</html>
